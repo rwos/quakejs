@@ -49,7 +49,7 @@ function loadConfig(configPath) {
 	});
 
 	var server = http.createServer(app);
-	server.listen(config.port, function () {
+	server.listen(config.port, 'localhost', function () {
 		logger.info('web server is now listening on port', server.address().address, server.address().port);
 	});
 
